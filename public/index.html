@@ -25,11 +25,13 @@
 
 <body>
     <div class="wrap">
+        <p>客戶名稱</p>
+        <input type="text" class="text-center" name="" id="customer">
         <p>門板</p>
         <select name="" id="plates">
             <option value="none" disabled selected>---選擇門板---</option>
             <option value="美耐門">美耐門</option>
-            <option value="水晶們/結晶門">水晶們/結晶門</option>
+            <option value="水晶們/結晶門">水晶門/結晶門</option>
             <option value="結晶六面">結晶六面</option>
             <option value="高壓門">高壓門</option>
             <option value="None">None</option>
@@ -67,6 +69,9 @@
 
         <button id="submit" class="btn btn-primary btn-sm mt-5" type="button">匯出</button>
 
+        
+    </div>
+    <div>
         <table class="table" style="margin-top: 40px;">
             <thead>
                 <tr>
@@ -74,23 +79,17 @@
                     <th scope="col">門板</th>
                     <th scope="col">檯面</th>
                     <th scope="col">桶身</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">桶身材質</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="add_meta">
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                    <td>@mdo</td>
                 </tr>
             </tbody>
         </table>
     </div>
 
-
-
+    <script src="js/vendors.js"></script>
     <script src="js/all.js"></script>
 </body>
 
