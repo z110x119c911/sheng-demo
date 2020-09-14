@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <title>Document</title>
+
+</head>
+<style>
+    select {
+        padding: 5px;
+    }
+
+    .wrap {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    p {
+        padding-top: 20px;
+    }
+</style>
+
+<body>
+    <div class="wrap">
+        <p>門板</p>
+        <select name="" id="plates">
+            <option value="none" disabled selected>---選擇門板---</option>
+            <option value="美耐門">美耐門</option>
+            <option value="水晶們/結晶門">水晶們/結晶門</option>
+            <option value="結晶六面">結晶六面</option>
+            <option value="高壓門">高壓門</option>
+            <option value="None">None</option>
+        </select>
+        <p>檯面</p>
+        <select name="" id="mesa">
+            <option value="---選擇檯面---" disabled selected>---選擇檯面---</option>
+            <option value="無檯面">無檯面</option>
+            <option value="美耐">美耐</option>
+            <option value="不鏽鋼">不鏽鋼</option>
+            <option value="人造石">人造石</option>
+            <option value="人造石(韓)">人造石(韓)</option>
+            <option value="石英石">石英石</option>
+            <option value="矽鋼石">矽鋼石</option>
+            <option value="None">None</option>
+        </select>
+        <p>桶身</p>
+        <select name="" id="Barrel">
+            <option value="---選擇檯面---" disabled selected>---選擇桶身---</option>
+            <option value="上櫃">上櫃</option>
+            <option value="下櫃">下櫃</option>
+            <option value="上下櫃">上下櫃</option>
+            <option value="None">None</option>
+        </select>
+        <p>桶身材質</p>
+        <select name="" id="barrelMaterial">
+            <option value="---選擇檯面---" disabled selected>---選擇桶身---</option>
+            <option value="木桶">木桶</option>
+            <option value="白鐵桶">白鐵桶</option>
+            <option value="白鐵雙層">白鐵雙層</option>
+            <option value="發泡桶">發泡桶</option>
+            <option value="None">None</option>
+        </select>
+        <br>
+
+        <button id="submit" class="btn btn-primary btn-sm mt-5" type="button">匯出</button>
+
+        <table class="table" style="margin-top: 40px;">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">門板</th>
+                    <th scope="col">檯面</th>
+                    <th scope="col">桶身</th>
+                    <th scope="col">Handle</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                    <td>@mdo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <script src="js/all.js"></script>
+</body>
+
+</html>
