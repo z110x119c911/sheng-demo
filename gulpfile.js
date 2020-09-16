@@ -140,7 +140,7 @@ gulp.task('watch', function (done) {
 //依序執行任務
 gulp.task('default',
     gulp.parallel(
-        'copyHTML' , 'sass', 'babel',
+        'copyHTML', 'image-min' , 'sass', 'babel',
          'vendorJs', 'browser-sync' , 'watch')
 )
 //發佈正式版依序執行任務
