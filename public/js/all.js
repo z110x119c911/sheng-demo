@@ -2,7 +2,8 @@
 
 $(document).ready(function () {
   //set click number
-  var ClickNumber = 0; //onload
+  var ClickNumber = 0; //---------------------------------------------------------------------------------------------
+  //onload
 
   window.onload = function () {
     var dataArr = data;
@@ -38,13 +39,14 @@ $(document).ready(function () {
     $('#mesa').append(mesastr);
     $('#plates').append(platesstr);
     $('#table_number').append(unitstr);
-  };
+  }; //---------------------------------------------------------------------------------------------
+
 
   $('#submit').click(function (e) {
     //get click number
-    ClickNumber++;
-    var ClickNumber_str = '';
-    ClickNumber_str = ClickNumber; //取得選擇與材質
+    ClickNumber++; //let input empty
+
+    $('[name="need_clean"]').empty(); //取得選擇與材質
     //桶身
 
     var barrel = $('#barrel').val(); //檯面
@@ -56,11 +58,7 @@ $(document).ready(function () {
     var Name = $('#customer_Name').val();
     var Phone = $('#customer_Phone').val();
     var Date = $('#customer_Date').val();
-    var Address = $('#customer_Address').val(); //設定
-    // ----------------------------------------------------------------
-    // $('#customer_Name_ouput,#customer_Phone_ouput,#customer_Date_ouput,#customer_Address_ouput,#barrel_span_material').empty();
-
-    $('[name="need_clean"]').empty(); //customer_information
+    var Address = $('#customer_Address').val(); //customer_information
 
     $('#customer_Name_ouput').append(Name);
     $('#customer_Phone_ouput').append(Phone);
@@ -76,16 +74,18 @@ $(document).ready(function () {
     // preview table list
 
     var data = [];
-    var listString = '';
+    var listString = ''; //get value of table list
+
     var table_product = $('#table_product').val();
     var table_kind = $('#table_kind').val();
     var table_quantity = $('#table_quantity').val();
     var table_number = $('#table_number').val();
     var table_price = $('#table_price').val();
     var table_totalPrice = $('#table_totalPrice').val();
-    var table_text = $('#table_text').val();
+    var table_text = $('#table_text').val(); //put data in obj
+
     var obj_table = {
-      ClickNumber: ClickNumber_str,
+      ClickNumber: ClickNumber,
       product: table_product,
       kind: table_kind,
       number: table_quantity,
@@ -94,25 +94,20 @@ $(document).ready(function () {
       totalPrice: table_totalPrice,
       text: table_text
     };
-    data.push(obj_table);
+    data.push(obj_table); //run data of table list
 
     for (var i = 0; i < data.length; i++) {
       listString += "\n                <tr>\n                    <td class=\"text-center\">".concat(data[i].ClickNumber, "</td>\n                    <td>").concat(data[i].product, "</td>\n                    <td>").concat(data[i].kind, "</td>\n                    <td>").concat(data[i].number, "</td>\n                    <td>").concat(data[i].quantity, "</td>\n                    <td>").concat(data[i].price, "</td>\n                    <td>").concat(data[i].totalPrice, "</td>\n                    <td>").concat(data[i].text, "</td>\n                </tr>\n            ");
-      console.log(data); // <br>
-      //     <li>${data[i].kind}</li>
-      //     <li>${data[i].number}</li>
-      //     <li>${data[i].quantity}</li>
-      //     <li>${data[i].price}</li>
-      //     <li>${data[i].totalPrice}</li>
-      //     <li>${data[i].text}</li>
-      //     <br>
+      console.log(data);
     }
 
     $('#list').append(listString);
-  });
+  }); //hide all setting UI
+
   $('#hide_Form').click(function () {
     $('#main').slideToggle();
-  });
+  }); // $('#reset_Material').click(function(){
+  // });
 });
 "use strict";
 
