@@ -1,21 +1,126 @@
 $(document).ready(function () {
-    $('#submit').click(function () {
-        const plates = $('#plates').val();
-        const mesa = $('#mesa').val();
-        const Barrel = $('#Barrel').val();
-        const barrelMaterial = $('#barrelMaterial').val();
-        const customer = $('#customer').val();
-        let str = '';
+    //set click number
+    var ClickNumber = 0;
+    //onload
+    window.onload = function(){        
+        const dataArr = data;
+        let barrelstr = '';
+        let mesastr = '';
+        let platesstr = '';
+        let unitstr = '';
+        for (let i = 0; i < dataArr.barrelMaterial.length; i++){
+            let string = `<option value="${dataArr.barrelMaterial[i].name}">${dataArr.barrelMaterial[i].name}</option>`
+            barrelstr += string;
+        }
+        for (let i = 0; i < dataArr.mesaMaterial.length; i++) {
+            let string = `<option value="${dataArr.mesaMaterial[i].name}">${dataArr.mesaMaterial[i].name}</option>`
+            mesastr += string;
+        }
+        for (let i = 0; i < dataArr.platesMaterial.length; i++) {
+            let string = `<option value="${dataArr.platesMaterial[i].name}">${dataArr.platesMaterial[i].name}</option>`
+            platesstr += string;
+        }
+        for (let i = 0; i < dataArr.unit.length; i++) {
+            let string = `<option value="${dataArr.unit[i].size}">${dataArr.unit[i].size}</option>`
+            unitstr += string;
 
-        str += `
-        <tr>
-            <th scope="row">${customer}</th>
-            <td>${plates}</td>
-            <td>${mesa}</td>
-            <td>${Barrel}</td>
-            <td>${barrelMaterial}</td>
-        </tr>
-        `
-        $('#add_meta').append(str);
+        }
+        $('#barrel').append(barrelstr);
+        $('#mesa').append(mesastr);
+        $('#plates').append(platesstr);
+        $('#table_number').append(unitstr);
+
+        
+    };
+
+
+    $('#submit').click(function (e) {
+    //get click number
+        ClickNumber ++;
+        let ClickNumber_str = '';
+        ClickNumber_str = ClickNumber;
+    //取得選擇與材質
+        //桶身
+        const barrel = $('#barrel').val();
+        //檯面
+        const mesa = $('#mesa').val();
+        //門板
+        const plates = $('#plates').val();
+    //取得客戶資訊
+        const Name = $('#customer_Name').val();
+        const Phone = $('#customer_Phone').val();
+        const Date = $('#customer_Date').val();
+        const Address = $('#customer_Address').val();
+    //設定
+        
+    // ----------------------------------------------------------------
+        // $('#customer_Name_ouput,#customer_Phone_ouput,#customer_Date_ouput,#customer_Address_ouput,#barrel_span_material').empty();
+        $('[name="need_clean"]').empty();
+        //customer_information
+        $('#customer_Name_ouput').append(Name);
+        $('#customer_Phone_ouput').append(Phone);
+        $('#customer_Date_ouput').append(Date);
+        $('#work_Address_ouput').append(Address);
+    //Material_select
+        //桶身
+        $('#barrel_span_material').append(barrel);
+        // //門板
+        $('#mesa_span_material').append(mesa);
+        // //門板
+        $('#plates_span_material').append(plates);
+        //table
+        
+        // preview table list
+        let data = [];
+        let listString = '';
+
+        let table_product = $('#table_product').val(); 
+        let table_kind = $('#table_kind').val();
+        let table_quantity = $('#table_quantity').val();
+        let table_number = $('#table_number').val();
+        let table_price = $('#table_price').val();
+        let table_totalPrice = $('#table_totalPrice').val();
+        let table_text = $('#table_text').val(); 
+        let obj_table = {
+            ClickNumber: ClickNumber_str,
+            product: table_product,
+            kind: table_kind,
+            number: table_quantity,
+            quantity: table_number,
+            price: table_price,
+            totalPrice: table_totalPrice,
+            text: table_text,
+            };
+        data.push(obj_table);
+        
+        for (let i = 0; i < data.length; i++) {
+
+            listString += `
+                <tr>
+                    <td class="text-center">${data[i].ClickNumber}</td>
+                    <td>${data[i].product}</td>
+                    <td>${data[i].kind}</td>
+                    <td>${data[i].number}</td>
+                    <td>${data[i].quantity}</td>
+                    <td>${data[i].price}</td>
+                    <td>${data[i].totalPrice}</td>
+                    <td>${data[i].text}</td>
+                </tr>
+            `;
+            console.log(data);
+            // <br>
+            //     <li>${data[i].kind}</li>
+            //     <li>${data[i].number}</li>
+            //     <li>${data[i].quantity}</li>
+            //     <li>${data[i].price}</li>
+            //     <li>${data[i].totalPrice}</li>
+            //     <li>${data[i].text}</li>
+            //     <br>
+        }
+        $('#list').append(listString);
+    });
+
+    $('#hide_Form').click(function(){
+        $('#main').slideToggle();
     });
 });
