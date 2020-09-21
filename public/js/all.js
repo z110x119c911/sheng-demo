@@ -97,8 +97,7 @@ $(document).ready(function () {
     data.push(obj_table); //run data of table list
 
     for (var i = 0; i < data.length; i++) {
-      listString += "\n                <tr>\n                    <td class=\"text-center\">".concat(data[i].ClickNumber, "</td>\n                    <td>").concat(data[i].product, "</td>\n                    <td>").concat(data[i].kind, "</td>\n                    <td>").concat(data[i].number, "</td>\n                    <td>").concat(data[i].quantity, "</td>\n                    <td>").concat(data[i].price, "</td>\n                    <td>").concat(data[i].totalPrice, "</td>\n                    <td>").concat(data[i].text, "</td>\n                </tr>\n            ");
-      console.log(data);
+      listString += "\n                <tr>\n                    <td class=\"text-center\">".concat(data[i].ClickNumber, "</td>\n                    <td>").concat(data[i].product, "</td>\n                    <td>").concat(data[i].kind, "</td>\n                    <td>").concat(data[i].number, "</td>\n                    <td>").concat(data[i].quantity, "</td>\n                    <td>").concat(data[i].price, "</td>\n                    <td>").concat(data[i].totalPrice, "</td>\n                    <td>").concat(data[i].text, "</td>\n                </tr>\n            "); // console.log(data);
     }
 
     $('#list').append(listString);
@@ -106,8 +105,15 @@ $(document).ready(function () {
 
   $('#hide_Form').click(function () {
     $('#main').slideToggle();
-  }); // $('#reset_Material').click(function(){
-  // });
+  });
+  $('#reset_ALLMaterial').click(function () {
+    $('#list').empty();
+  }); //未完成
+
+  $('#reset_LastOne').click(function () {
+    // $('#list > tr').last().empty();
+    $('#list').children("tr:last").remove();
+  });
 });
 "use strict";
 

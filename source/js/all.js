@@ -103,7 +103,7 @@ $(document).ready(function () {
                     <td>${data[i].text}</td>
                 </tr>
             `;
-            console.log(data);
+            // console.log(data);
         }
         $('#list').append(listString);
     });
@@ -111,7 +111,12 @@ $(document).ready(function () {
     $('#hide_Form').click(function(){
         $('#main').slideToggle();
     });
-    // $('#reset_Material').click(function(){
-        
-    // });
+    $('#reset_ALLMaterial').click(function(){
+        $('#list').empty();
+    });
+    //未完成
+    $('#reset_LastOne').click(function () {
+        // $('#list > tr').last().empty();
+        $('#list').children("tr:last").remove();
+    });
 });
