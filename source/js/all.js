@@ -2,6 +2,7 @@ $(document).ready(function () {
     //set click number
     var ClickNumber = 0;
 //---------------------------------------------------------------------------------------------
+    
     //onload
     window.onload = function(){        
         const dataArr = data;
@@ -64,7 +65,7 @@ $(document).ready(function () {
         $('#mesa_span_material').append(mesa);
         // //門板
         $('#plates_span_material').append(plates);
-        //table
+
         
         // preview table list
         let data = [];
@@ -112,11 +113,17 @@ $(document).ready(function () {
         $('#main').slideToggle();
     });
     $('#reset_ALLMaterial').click(function(){
+        ClickNumber = 0;
         $('#list').empty();
     });
     //未完成
     $('#reset_LastOne').click(function () {
-        // $('#list > tr').last().empty();
+        if (ClickNumber > 0){
+            ClickNumber --;
+        }else if(ClickNumber < 0){
+            ClickNumber = 0;
+        }
         $('#list').children("tr:last").remove();
+        
     });
 });
