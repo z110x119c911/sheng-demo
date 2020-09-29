@@ -7785,4 +7785,8 @@ input[type=checkbox] {
   width: 20px;
   height: 20px; }
 
+@media (min-width: 768px) {
+  .border_set {
+    border: 1px solid #000000; } }
+
 /*# sourceMappingURL=all.css.map */
