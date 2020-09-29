@@ -41,7 +41,7 @@ $(document).ready(function () {
 
   $('#submit').click(function (e) {
     //取編號
-    ClickNumber++; //let input empty
+    ClickNumber++; //let input empty 為了覆蓋原本的value
 
     $('[name="need_clean"]').empty(); //取得選擇與材質
     //桶身
@@ -99,7 +99,7 @@ $(document).ready(function () {
     console.log(obj_table); //run data of table list
 
     for (var i = 0; i < data.length; i++) {
-      listString += "\n                <tr>\n                    <td class=\"text-center\">".concat(data[i].ClickNumber, "</td>\n                    <td>").concat(data[i].product, "</td>\n                    <td>").concat(data[i].kind, "</td>\n                    <td>").concat(data[i].number, "</td>\n                    <td>").concat(data[i].quantity, "</td>\n                    <td>").concat(data[i].price, "</td>\n                    <td>").concat(data[i].totalPrice, "</td>\n                    <td>").concat(data[i].text, "</td>\n                </tr>\n            ");
+      listString += "\n            <tr>\n                <td class=\"text-center\">".concat(data[i].ClickNumber, "</td>\n                <td>").concat(data[i].product, "</td>\n                <td>").concat(data[i].kind, "</td>\n                <td>").concat(data[i].number, "</td>\n                <td>").concat(data[i].quantity, "</td>\n                <td>").concat(data[i].price, "</td>\n                <td>").concat(data[i].totalPrice, "</td>\n                <td>").concat(data[i].text, "</td>\n            </tr>\n        ");
     }
 
     $('#list').append(listString);
@@ -127,6 +127,13 @@ $(document).ready(function () {
 
   $('#custom_setting_clear').click(function () {
     $('#custom_setting').val("");
+  }); //清除自訂選項input內容
+
+  $('#table_clear').click(function () {
+    $('#table_quantity').val("");
+    $('#table_price').val("");
+    $('#table_totalPrice').val("");
+    $('#table_text').val("");
   }); //自訂函示
 
   function type_List() {
