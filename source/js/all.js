@@ -6,7 +6,10 @@ $(document).ready(function () {
     window.onload = function () {
         type_List();
         unit_List();
-        metal_List(); 
+        metal_List();
+        //custom setting
+        
+        
     };
 //---------------------------------------------------------------------------------------------
     $('#allList').change(function(){
@@ -27,10 +30,14 @@ $(document).ready(function () {
         }
     });
     
-
-//---------------------------------------------------------------------------------------------
-
+//----自訂選項隱藏設定---------------------------------------------------------------
+    $('#checkbox').click(function(){
+        $('#normal_display').toggle();
+        $('#custom_display').toggleClass('d-none');
+    });
+//----匯出按鈕設定---------------------------------------------------------------------------
     $('#submit').click(function (e) {
+        //取編號
         ClickNumber ++;
     //let input empty
     $('[name="need_clean"]').empty();
@@ -55,22 +62,35 @@ $(document).ready(function () {
         //Material_select
         //桶身
         $('#barrel_span_material').append(barrel);
-        // //門板
+        //門板
         $('#mesa_span_material').append(mesa);
-        // //門板
+        //門板
         $('#plates_span_material').append(plates);
-
+        
+        //
+        
         
         // preview table list
         let data = [];
         let listString = '';
-        var table_product = $('#table_product').val();
+        //
+        var table_product = '';
+        if ($('#normal_display').is(':visible')) 
+        {
+            table_product = $('#table_product').val();
+            $('#custom_setting').attr('disabled');
+        } else {
+            table_product = $('#custom_setting').val();
+            $('#table_product').attr('disabled');
+        }
+        //
         var table_kind = $('#table_kind').val();
         var table_quantity = $('#table_quantity').val();
         var table_number = $('#table_number').val();
         var table_price = $('#table_price').val();
         var table_totalPrice = $('#table_totalPrice').val();
         var table_text = $('#table_text').val(); 
+
         //put data in obj
         let obj_table = {
             ClickNumber: ClickNumber,
@@ -83,6 +103,7 @@ $(document).ready(function () {
             text: table_text,
         };
         data.push(obj_table);
+        
         console.log(obj_table);
         //run data of table list
         for (let i = 0; i < data.length; i++) {
@@ -100,8 +121,9 @@ $(document).ready(function () {
             `;
         }
         $('#list').append(listString);
+        
     });
-    
+    // ---------------------------------------------------------------------------------
     //hide all setting UI
     $('#hide_Form').click(function(){
         $('#main').slideToggle();

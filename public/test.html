@@ -254,10 +254,22 @@
                         <input id="table_text" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
                     </div>
                     <div class="col-4">
-                        <p>品名</p>
-                        <select class="py-2 w-100" name="" id="table_product" data-toggle="tooltip" title="選擇品名">
-                            <option disabled selected>---選擇品名---</option>
-                        </select>
+                        <div class="form-check py-3">
+                            <input class="form-check-input position-static" type="checkbox" id="checkbox" value="option1">
+                            是否需要自訂品名
+                        </div>
+                        <div id="normal_display">
+                            <p>品名</p>
+                            <select class="py-2 w-100" name="" id="table_product" data-toggle="tooltip" title="選擇品名">
+                                <option disabled selected>---選擇品名---</option>
+                            </select>
+                        </div>
+                        
+                        <div class="d-none" id="custom_display">
+                            <p>自訂品名</p>
+                            <input id="custom_setting" class="form-control w-100" data-toggle="tooltip" title="自訂" type="text">
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -281,8 +293,7 @@
     <footer class="py-5">
 
     </footer>
-    <script src="https://unpkg.com/@popperjs/core@2
-"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="js/vendors.js"></script>
     <script src="js/all.js"></script>
 </body>
