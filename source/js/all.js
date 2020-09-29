@@ -8,8 +8,6 @@ $(document).ready(function () {
         unit_List();
         metal_List();
         //custom setting
-        
-        
     };
 //---------------------------------------------------------------------------------------------
     $('#allList').change(function(){
@@ -37,9 +35,11 @@ $(document).ready(function () {
     });
 //----匯出按鈕設定---------------------------------------------------------------------------
     $('#submit').click(function (e) {
-        //取編號
+    //取編號
         ClickNumber ++;
+
     //let input empty
+
     $('[name="need_clean"]').empty();
     //取得選擇與材質
         //桶身
@@ -48,33 +48,24 @@ $(document).ready(function () {
         const mesa = $('#mesa').val();
         //門板
         const plates = $('#plates').val();
-        //取得客戶資訊
-        const Name = $('#customer_Name').val();
-        const Phone = $('#customer_Phone').val();
-        const Date = $('#customer_Date').val();
-        const Address = $('#customer_Address').val(); 
-        
-        //customer_information
-        $('#customer_Name_ouput').append(Name);
-        $('#customer_Phone_ouput').append(Phone);
-        $('#customer_Date_ouput').append(Date);
-        $('#work_Address_ouput').append(Address);
-        //Material_select
+    //客戶資訊customer_information
+        $('#customer_Name_ouput').append($('#customer_Name').val());
+        $('#customer_Phone_ouput').append($('#customer_Phone').val());
+        $('#customer_Date_ouput').append($('#customer_Date').val());
+        $('#work_Address_ouput').append($('#customer_Address').val());
+    
+    //Material_select
         //桶身
         $('#barrel_span_material').append(barrel);
         //門板
         $('#mesa_span_material').append(mesa);
         //門板
         $('#plates_span_material').append(plates);
-        
-        //
-        
-        
         // preview table list
         let data = [];
         let listString = '';
         //
-        var table_product = '';
+        let table_product = '';
         if ($('#normal_display').is(':visible')) 
         {
             table_product = $('#table_product').val();
@@ -84,12 +75,12 @@ $(document).ready(function () {
             $('#table_product').attr('disabled');
         }
         //
-        var table_kind = $('#table_kind').val();
-        var table_quantity = $('#table_quantity').val();
-        var table_number = $('#table_number').val();
-        var table_price = $('#table_price').val();
-        var table_totalPrice = $('#table_totalPrice').val();
-        var table_text = $('#table_text').val(); 
+        let table_kind = $('#table_kind').val();
+        let table_quantity = $('#table_quantity').val();
+        let table_number = $('#table_number').val();
+        let table_price = $('#table_price').val();
+        let table_totalPrice = $('#table_totalPrice').val();
+        let table_text = $('#table_text').val(); 
 
         //put data in obj
         let obj_table = {
@@ -123,17 +114,17 @@ $(document).ready(function () {
         $('#list').append(listString);
         
     });
-    // ---------------------------------------------------------------------------------
-    //hide all setting UI
+    // 各個click設定------------------------------------------------------------
+        //hide all setting UI
     $('#hide_Form').click(function(){
         $('#main').slideToggle();
     });
-    //remove Table all DOM
+        //remove Table all DOM
     $('#reset_ALLMaterial').click(function(){
         ClickNumber = 0;
         $('#list').empty();
     });
-    //remove Table last DOM
+        //remove Table last DOM
     $('#reset_LastOne').click(function () {
         if (ClickNumber > 0){
             ClickNumber --;
@@ -141,8 +132,18 @@ $(document).ready(function () {
             ClickNumber = 0;
         }
         $('#list').children("tr:last").remove();
-        
     });
+        //清除自訂選項input內容
+    $('#custom_setting_clear').click(function(){
+        $('#custom_setting').val("");
+    });
+
+
+
+
+
+
+//自訂函示
     function type_List() {
         let allListstr = '';
         //類別

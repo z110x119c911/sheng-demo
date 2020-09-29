@@ -221,8 +221,28 @@
                             <option disabled selected value="none">---選擇類別---</option>
                         </select>
                     </div>
+                    <div class="col-4">
+                        <div class="form-check py-3">
+                            <input class="form-check-input position-static" type="checkbox" id="checkbox" value="option1">
+                            是否需要自訂品名
+                        </div>
+                        <div id="normal_display">
+                            <p>品名</p>
+                            <select class="py-2 w-100" name="" id="table_product" data-toggle="tooltip" title="選擇品名">
+                                <option disabled selected>---選擇品名---</option>
+                            </select>
+                        </div>
+                    
+                        <div class="d-none" id="custom_display">
+                            <p>自訂品名</p>
+                            <div class="d-flex">
+                                <input id="custom_setting" class="form-control w-100" data-toggle="tooltip" title="自訂" type="text">
+                                <button id="custom_setting_clear" class="btn btn-primary w-25">清除</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <br>
+                <hr>
                 <div class="row">
                     <div class="col-2">
                         <p>型號</p>
@@ -252,24 +272,6 @@
                     <div class="col-2">
                         <p>附加說明</p>
                         <input id="table_text" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
-                    </div>
-                    <div class="col-4">
-                        <div class="form-check py-3">
-                            <input class="form-check-input position-static" type="checkbox" id="checkbox" value="option1">
-                            是否需要自訂品名
-                        </div>
-                        <div id="normal_display">
-                            <p>品名</p>
-                            <select class="py-2 w-100" name="" id="table_product" data-toggle="tooltip" title="選擇品名">
-                                <option disabled selected>---選擇品名---</option>
-                            </select>
-                        </div>
-                        
-                        <div class="d-none" id="custom_display">
-                            <p>自訂品名</p>
-                            <input id="custom_setting" class="form-control w-100" data-toggle="tooltip" title="自訂" type="text">
-                        </div>
-                        
                     </div>
                 </div>
             </div>
