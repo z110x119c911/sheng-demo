@@ -139,7 +139,7 @@
     </div>
 
     <div class="container mt-600 d-flex justify-content-end py-3">
-        <button id="hide_Form" class="btn btn-primary btn-sm p-2" type="button">登打完畢隱藏</button>
+        <button id="hide_Form" class="btn btn-primary btn-sm p-2" type="button" data-toggle="tooltip" title="全數完畢點擊">登打完畢隱藏</button>
     </div>
 <!-- 客戶資料登打 -->
     <main id="main">
@@ -152,7 +152,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">客戶名稱：</span>
                             </div>
-                            <input id="customer_Name" type="text" class="form-control" placeholder="姓名/公司">
+                            <input id="customer_Name" type="text" class="form-control" data-toggle="tooltip" title="客戶名稱" placeholder="姓名/公司">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -160,7 +160,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">客戶電話：</span>
                             </div>
-                            <input id="customer_Phone" type="tel" class="form-control" placeholder="電話">
+                            <input id="customer_Phone" type="tel" class="form-control" data-toggle="tooltip" title="客戶電話" placeholder="電話">
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -168,7 +168,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">報價日期：</span>
                             </div>
-                            <input id="customer_Date" type="date" class="form-control" placeholder="日期">
+                            <input id="customer_Date" type="date" class="form-control" data-toggle="tooltip" title="報價日期" placeholder="日期">
                         </div>
                     </div>
                 </div>
@@ -178,7 +178,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">施工地址：</span>
                             </div>
-                            <input id="customer_Address" type="text" class="form-control" placeholder="地址">
+                            <input id="customer_Address" type="text" class="form-control" data-toggle="tooltip" title="施工地址" placeholder="地址">
                         </div>
                     </div>
                 </div>
@@ -187,67 +187,77 @@
         </section>
         <!-- 選擇客戶資訊 -->
         <section class="py-5 bg-bg2">
-            <div class="container">
-                <p class="py-3">材質選擇：</p>
+            <div class="container border py-5 my-5">
+                <p class="h4">材質選擇：</p>
+                <br>
                 <div class="row">
                     <div class="col-4">
-                        <p class="">桶身材質：</p>
-                        <select class="py-2 w-100" name="" id="barrel">
+                        <select class="py-2 w-100" name="" id="barrel" data-toggle="tooltip" title="選擇桶身材質">
                             <option value="" disabled selected>---選擇桶身材質---</option>
                         </select>
                     </div>
                     <div class="col-4">
-                        <p>檯面材質：</p>
-                        <select class="py-2 w-100" name="" id="mesa">
+                        <select class="py-2 w-100" name="" id="mesa" data-toggle="tooltip" title="選擇檯面材質">
                             <option value="" disabled selected>---選擇檯面材質---</option>
                         </select>
                     </div>
                     <div class="col-4">
-                        <p>門板材質：</p>
-                        <select class="py-2 w-100" name="" id="plates">
+                        <select class="py-2 w-100" name="" id="plates" data-toggle="tooltip" title="選擇門板材質">
                             <option value="" disabled selected>---選擇門板材質---</option>
                         </select>
                     </div>
                 </div>
                 
-                <hr class="my-5">
 
+
+                
+            </div>
+            <div class="container border py-5 my-5">
+                <p class="h4">客戶訂單明細：<span class="text-danger">(請先選擇類別)</span></p>
+                <div class="row">
+                    <div class="col-2">
+                        <p>類別</p>
+                        <select class="py-2 w-100" name="" id="allList" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none">---選擇類別---</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-2">
                         <p>型號</p>
-                        <select class="py-2 w-100" name="" id="table_kind">
+                        <select class="py-2 w-100" name="" id="table_kind" data-toggle="tooltip" title="選擇型號">
                             <option disabled selected>---選擇型號---</option>
-                            <option value="美耐門">美耐門</option>
-                        </select>
-                    </div>
-                    <div class="col-2">
-                        <p>品名</p>
-                        <select class="py-2 w-100" name="" id="table_product">
-                            <option disabled selected>---選擇品名---</option>
-                            <option value="美耐門">美耐門</option>
                         </select>
                     </div>
                     <div class="col-2">
                         <p>數量</p>
-                        <input id="table_quantity" class="form-control w-100" min="0" max="99" type="number">
+                        <input id="table_quantity" class="form-control w-100" min="0" max="99" type="number" data-toggle="tooltip"
+                            title="輸入數量">
                     </div>
                     <div class="col-2">
                         <p>單位</p>
-                        <select class="py-2 w-100" name="" id="table_number">
+                        <select class="py-2 w-100" name="" id="table_number" data-toggle="tooltip" title="選擇單位">
                             <option disabled selected>---選擇單位---</option>
                         </select>
                     </div>
                     <div class="col-2">
                         <p>單價</p>
-                        <input id="table_price" class="form-control w-100" type="text">
+                        <input id="table_price" class="form-control w-100" type="text" data-toggle="tooltip" title="輸入/匯入單價">
                     </div>
                     <div class="col-2">
                         <p>小計</p>
-                        <input id="table_totalPrice" class="form-control w-100" type="text">
+                        <input id="table_totalPrice" class="form-control w-100" data-toggle="tooltip" title="總金額" type="text">
                     </div>
                     <div class="col-2">
                         <p>附加說明</p>
-                        <input id="table_text" class="form-control w-100" type="text">
+                        <input id="table_text" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                    <div class="col-4">
+                        <p>品名</p>
+                        <select class="py-2 w-100" name="" id="table_product" data-toggle="tooltip" title="選擇品名">
+                            <option disabled selected>---選擇品名---</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -271,6 +281,8 @@
     <footer class="py-5">
 
     </footer>
+    <script src="https://unpkg.com/@popperjs/core@2
+"></script>
     <script src="js/vendors.js"></script>
     <script src="js/all.js"></script>
 </body>

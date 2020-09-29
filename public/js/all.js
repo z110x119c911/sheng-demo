@@ -2,48 +2,39 @@
 
 $(document).ready(function () {
   //set click number
-  var ClickNumber = 0; //---------------------------------------------------------------------------------------------
-  //onload
+  var ClickNumber = 0;
+  var dataArr = data; //onload
 
   window.onload = function () {
-    var dataArr = data;
-    var barrelstr = '';
-    var mesastr = '';
-    var platesstr = '';
-    var unitstr = '';
-
-    for (var i = 0; i < dataArr.barrelMaterial.length; i++) {
-      var string = "<option value=\"".concat(dataArr.barrelMaterial[i].name, "\">").concat(dataArr.barrelMaterial[i].name, "</option>");
-      barrelstr += string;
-    }
-
-    for (var _i = 0; _i < dataArr.mesaMaterial.length; _i++) {
-      var _string = "<option value=\"".concat(dataArr.mesaMaterial[_i].name, "\">").concat(dataArr.mesaMaterial[_i].name, "</option>");
-
-      mesastr += _string;
-    }
-
-    for (var _i2 = 0; _i2 < dataArr.platesMaterial.length; _i2++) {
-      var _string2 = "<option value=\"".concat(dataArr.platesMaterial[_i2].name, "\">").concat(dataArr.platesMaterial[_i2].name, "</option>");
-
-      platesstr += _string2;
-    }
-
-    for (var _i3 = 0; _i3 < dataArr.unit.length; _i3++) {
-      var _string3 = "<option value=\"".concat(dataArr.unit[_i3].size, "\">").concat(dataArr.unit[_i3].size, "</option>");
-
-      unitstr += _string3;
-    }
-
-    $('#barrel').append(barrelstr);
-    $('#mesa').append(mesastr);
-    $('#plates').append(platesstr);
-    $('#table_number').append(unitstr);
+    type_List();
+    unit_List();
+    metal_List();
   }; //---------------------------------------------------------------------------------------------
 
 
+  $('#allList').change(function () {
+    var except_product_str = "<option disabled selected>---\u9078\u64C7\u54C1\u540D---</option>";
+    var alltype = $('#allList').val();
+
+    if (alltype == '廚具') {
+      for (var i = 0; i < dataArr.testArea.length; i++) {
+        var string = "<option value=\"".concat(dataArr.testArea[i].test, "\">").concat(dataArr.testArea[i].test, "</option>");
+        except_product_str += string;
+      }
+
+      $('#table_product').empty().append(except_product_str);
+    } else if (alltype == '額外項目') {
+      for (var _i = 0; _i < dataArr.type.length; _i++) {
+        var _string = "<option value=\"".concat(dataArr.type[_i].name, "\">").concat(dataArr.type[_i].name, "</option>");
+
+        except_product_str += _string;
+      }
+
+      $('#table_product').empty().append(except_product_str);
+    }
+  }); //---------------------------------------------------------------------------------------------
+
   $('#submit').click(function (e) {
-    //get click number
     ClickNumber++; //let input empty
 
     $('[name="need_clean"]').empty(); //取得選擇與材質
@@ -73,8 +64,7 @@ $(document).ready(function () {
     $('#plates_span_material').append(plates); // preview table list
 
     var data = [];
-    var listString = ''; //get value of table list
-
+    var listString = '';
     var table_product = $('#table_product').val();
     var table_kind = $('#table_kind').val();
     var table_quantity = $('#table_quantity').val();
@@ -93,10 +83,11 @@ $(document).ready(function () {
       totalPrice: table_totalPrice,
       text: table_text
     };
-    data.push(obj_table); //run data of table list
+    data.push(obj_table);
+    console.log(obj_table); //run data of table list
 
     for (var i = 0; i < data.length; i++) {
-      listString += "\n                <tr>\n                    <td class=\"text-center\">".concat(data[i].ClickNumber, "</td>\n                    <td>").concat(data[i].product, "</td>\n                    <td>").concat(data[i].kind, "</td>\n                    <td>").concat(data[i].number, "</td>\n                    <td>").concat(data[i].quantity, "</td>\n                    <td>").concat(data[i].price, "</td>\n                    <td>").concat(data[i].totalPrice, "</td>\n                    <td>").concat(data[i].text, "</td>\n                </tr>\n            "); // console.log(data);
+      listString += "\n                <tr>\n                    <td class=\"text-center\">".concat(data[i].ClickNumber, "</td>\n                    <td>").concat(data[i].product, "</td>\n                    <td>").concat(data[i].kind, "</td>\n                    <td>").concat(data[i].number, "</td>\n                    <td>").concat(data[i].quantity, "</td>\n                    <td>").concat(data[i].price, "</td>\n                    <td>").concat(data[i].totalPrice, "</td>\n                    <td>").concat(data[i].text, "</td>\n                </tr>\n            ");
     }
 
     $('#list').append(listString);
@@ -104,11 +95,12 @@ $(document).ready(function () {
 
   $('#hide_Form').click(function () {
     $('#main').slideToggle();
-  });
+  }); //remove Table all DOM
+
   $('#reset_ALLMaterial').click(function () {
     ClickNumber = 0;
     $('#list').empty();
-  }); //未完成
+  }); //remove Table last DOM
 
   $('#reset_LastOne').click(function () {
     if (ClickNumber > 0) {
@@ -119,10 +111,74 @@ $(document).ready(function () {
 
     $('#list').children("tr:last").remove();
   });
+
+  function type_List() {
+    var allListstr = ''; //類別
+
+    for (var i = 0; i < dataArr.allList.length; i++) {
+      var string = "<option value=\"".concat(dataArr.allList[i].name, "\">").concat(dataArr.allList[i].name, "</option>");
+      allListstr += string;
+    }
+
+    $('#allList').append(allListstr);
+  }
+
+  function unit_List() {
+    var unitstr = ''; //單位
+
+    for (var i = 0; i < dataArr.unit.length; i++) {
+      var string = "<option value=\"".concat(dataArr.unit[i].size, "\">").concat(dataArr.unit[i].size, "</option>");
+      unitstr += string;
+    }
+
+    $('#table_number').append(unitstr);
+  }
+
+  function metal_List() {
+    var barrelstr = '';
+    var mesastr = '';
+    var platesstr = ''; //三種材質 start
+
+    for (var i = 0; i < dataArr.barrelMaterial.length; i++) {
+      var string = "<option value=\"".concat(dataArr.barrelMaterial[i].name, "\">").concat(dataArr.barrelMaterial[i].name, "</option>");
+      barrelstr += string;
+    }
+
+    $('#barrel').append(barrelstr);
+
+    for (var _i2 = 0; _i2 < dataArr.mesaMaterial.length; _i2++) {
+      var _string2 = "<option value=\"".concat(dataArr.mesaMaterial[_i2].name, "\">").concat(dataArr.mesaMaterial[_i2].name, "</option>");
+
+      mesastr += _string2;
+    }
+
+    $('#mesa').append(mesastr);
+
+    for (var _i3 = 0; _i3 < dataArr.platesMaterial.length; _i3++) {
+      var _string3 = "<option value=\"".concat(dataArr.platesMaterial[_i3].name, "\">").concat(dataArr.platesMaterial[_i3].name, "</option>");
+
+      platesstr += _string3;
+    }
+
+    $('#plates').append(platesstr);
+  }
 });
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip({
+    trigger: 'hover',
+    delay: 300,
+    placement: 'bottom'
+  });
+});
+"use strict";
 "use strict";
 
 var data = {
+  "allList": [{
+    "name": "廚具"
+  }, {
+    "name": "額外項目"
+  }],
   // "title":"桶身選擇與材質",
   "barrel": [{
     "name": "上櫃"
@@ -180,6 +236,7 @@ var data = {
   }, {
     "name": "高壓門"
   }],
+  //單位
   "unit": [{
     "size": "公分"
   }, {
@@ -196,6 +253,65 @@ var data = {
     "size": "台"
   }, {
     "size": "數片"
+  }],
+  //額外項目
+  "type": [{
+    "name": "上系統櫥櫃"
+  }, {
+    "name": "下系統櫥櫃(含檯面)"
+  }, {
+    "name": "電器櫃"
+  }, {
+    "name": "冰箱上櫃"
+  }, {
+    "name": "冰槽桶身更改"
+  }, {
+    "name": "修飾版"
+  }, {
+    "name": "檯面加工工資"
+  }, {
+    "name": "水槽"
+  }, {
+    "name": "水槽加工工資"
+  }, {
+    "name": "水龍頭"
+  }, {
+    "name": "抽屜"
+  }, {
+    "name": "拉籃"
+  }, {
+    "name": "側拉籃"
+  }, {
+    "name": "緩衝轉角小怪"
+  }, {
+    "name": "緩衝高身置物籃"
+  }, {
+    "name": "鉸鏈"
+  }, {
+    "name": "上/下掀門"
+  }, {
+    "name": "把手"
+  }, {
+    "name": "瓦斯爐"
+  }, {
+    "name": "排油煙機"
+  }, {
+    "name": "烘碗機"
+  }, {
+    "name": "踢腳"
+  }, {
+    "name": "強化烤漆玻璃"
+  }, {
+    "name": "安裝費"
+  }, {
+    "name": "清運"
+  }],
+  "testArea": [{
+    "test": "測試1"
+  }, {
+    "test": "測試2"
+  }, {
+    "test": "測試3"
   }]
 };
 $(document).ready(function () {
