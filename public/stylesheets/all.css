@@ -7789,4 +7789,9 @@ input[type=checkbox] {
   .border_set {
     border: 1px solid #000000; } }
 
+.check {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
 /*# sourceMappingURL=all.css.map */

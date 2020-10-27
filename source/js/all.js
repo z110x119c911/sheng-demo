@@ -2,13 +2,18 @@ $(document).ready(function () {
     //set click number
     var ClickNumber = 0;
     var dataArr = data;
+    
     //onload
     window.onload = function () {
+        
         type_List();
         unit_List();
         metal_List();
         //custom setting
     };
+    // $("[class='type_list']").onload = function(){
+    //     type_List();
+    // }
 //---------------------------------------------------------------------------------------------
 $('#allList').change(function(){
     let except_product_str = `<option disabled selected>---選擇品名---</option>`;
@@ -150,6 +155,8 @@ $('#table_clear').click(function () {
 
 
 
+
+
 //自訂函示
     function type_List() {
         let allListstr = '';
@@ -159,15 +166,19 @@ $('#table_clear').click(function () {
             allListstr += string;
         }
         $('#allList').append(allListstr);
+        $("select[id='type_list']").append(allListstr);
     }
+
+
     function unit_List(){
-        let unitstr = '';
+        let str = '';
         //單位
         for (let i = 0; i < dataArr.unit.length; i++) {
             let string = `<option value="${dataArr.unit[i].size}">${dataArr.unit[i].size}</option>`
-            unitstr += string;
+            str += string;
         }
-        $('#table_number').append(unitstr);
+        console.log(str);
+        $('#table_number').append(str);
     }
     function metal_List(){
         let barrelstr = '';

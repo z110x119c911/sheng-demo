@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/all.css">
+    <title>Document</title>
+
+</head>
+
+
+<body>
+
+    <!-- form -->
+    <div class="wrap">
+        <div class="container">
+            <div class="d-flex justify-content-between">
+                <img class="img-fluid d-none d-md-block" src="images/table.png" width="379" height="91" alt="">
+                <div class="mt-3">
+                    <p>統編:85446469</p>
+                    <p>電話:(02)29686990</p>
+                    <p>E-mail:changecasa@gmail.com</p>
+                    <img class="img-fluid d-none d-md-block" src="images/QRcode.png" alt="">
+                </div>
+            </div>
+            <!-- 客戶資訊 -->
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <th class="text-center" colspan="6">系統廚具報價單</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>客戶名稱：</p>
+                        </th>
+                        <th>
+                            <span name="need_clean" id="customer_Name_ouput"></span>
+                        </th>
+                        <th>
+                            <p>客戶電話：</p>
+                        </th>
+                        <th>
+                            <span name="need_clean" id="customer_Phone_ouput"></span>
+                        </th>
+                        <th>
+                            <p>報價日期：</p>
+                        </th>
+                        <th>
+                            <span name="need_clean" id="customer_Date_ouput"></span>
+                        </th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <p>施工地址：</p>
+                        </th>
+                        <th colspan="6">
+                            <span name="need_clean" id="work_Address_ouput"></span>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 材質選擇 -->
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <th>
+                            <p>桶身材質：<span name="need_clean" id="barrel_span_material"></span></p>
+                        </th>
+                        <th>
+                            <p>檯面材質：<span name="need_clean" id="mesa_span_material"></span></p>
+                        </th>
+                        <th>
+                            <p>門板材質：<span name="need_clean" id="plates_span_material"></span></p>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 客戶下單細向 -->
+            <table class="table table-sm table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">項目</th>
+                        <th scope="col">品名</th>
+                        <th scope="col">數量</th>
+                        <th scope="col">單位</th>
+                        <th scope="col">單價</th>
+                        <th scope="col">小計</th>
+                        <th scope="col">附加說明</th>
+                    </tr>
+                </thead>
+                <tbody id="list">
+                    <tr name="1">
+                        <td>1</td>
+                        <td id="a1"></td>
+                        <td id="a2"></td>
+                        <td id="a3"></td>
+                        <td id="a4"></td>
+                        <td id="a5"></td>
+                        <td id="a6"></td>
+                    </tr>
+                    <tr name="2">
+                        <td>2</td>
+                        <td id="b1"></td>
+                        <td id="b2"></td>
+                        <td id="b3"></td>
+                        <td id="b4"></td>
+                        <td id="b5"></td>
+                        <td id="b6"></td>
+                    </tr>
+                    <tr name="3">
+                        <td>3</td>
+                        <td id="c1"></td>
+                        <td id="c2"></td>
+                        <td id="c3"></td>
+                        <td id="c4"></td>
+                        <td id="c5"></td>
+                        <td id="c6"></td>
+                    </tr>
+                    <tr name="4">
+                        <td>4</td>
+                        <td id="d1"></td>
+                        <td id="d2"></td>
+                        <td id="d3"></td>
+                        <td id="d4"></td>
+                        <td id="d5"></td>
+                        <td id="d6"></td>
+                    </tr>
+                    <tr name="5">
+                        <td>5</td>
+                        <td id="e1"></td>
+                        <td id="e2"></td>
+                        <td id="e3"></td>
+                        <td id="e4"></td>
+                        <td id="e5"></td>
+                        <td id="e6"></td>
+                    </tr>
+                    <tr name="6">
+                    </tr>
+                        <td>6</td>
+                        <td id="f1"></td>
+                        <td id="f2"></td>
+                        <td id="f3"></td>
+                        <td id="f4"></td>
+                        <td id="f5"></td>
+                        <td id="f6"></td>
+                    <tr name="7">
+                    </tr>
+                        <td>7</td>
+                        <td id="g1"></td>
+                        <td id="g2"></td>
+                        <td id="g3"></td>
+                        <td id="g4"></td>
+                        <td id="g5"></td>
+                        <td id="g6"></td>
+                    <tr name="8">
+                    </tr>
+                    <td>8</td>
+                        <td id="h1"></td>
+                        <td id="h2"></td>
+                        <td id="h3"></td>
+                        <td id="h4"></td>
+                        <td id="h5"></td>
+                        <td id="h6"></td>
+                    <tr name="9">
+                    </tr>
+                    <td>9</td>
+                        <td id="i1"></td>
+                        <td id="i2"></td>
+                        <td id="i3"></td>
+                        <td id="i4"></td>
+                        <td id="i5"></td>
+                        <td id="i6"></td>
+                    <tr name="10">
+                    </tr>
+                    <td>10</td>
+                        <td id="j1"></td>
+                        <td id="j2"></td>
+                        <td id="j3"></td>
+                        <td id="j4"></td>
+                        <td id="j5"></td>
+                        <td id="j6"></td>
+                    <tr name="11">
+                    </tr>
+                    <td>11</td>
+                        <td id="k1"></td>
+                        <td id="k2"></td>
+                        <td id="k3"></td>
+                        <td id="k4"></td>
+                        <td id="k5"></td>
+                        <td id="k6"></td>
+                    <tr name="12">
+                    </tr>
+                    <td>12</td>
+                        <td id="l1"></td>
+                        <td id="l2"></td>
+                        <td id="l3"></td>
+                        <td id="l4"></td>
+                        <td id="l5"></td>
+                        <td id="l6"></td>
+                    <tr name="13">
+                    </tr>
+                    <td>13</td>
+                        <td id="m1"></td>
+                        <td id="m2"></td>
+                        <td id="m3"></td>
+                        <td id="m4"></td>
+                        <td id="m5"></td>
+                        <td id="m6"></td>
+                    <tr name="14">
+                    </tr>
+                    <td>14</td>
+                        <td id="n1"></td>
+                        <td id="n2"></td>
+                        <td id="n3"></td>
+                        <td id="n4"></td>
+                        <td id="n5"></td>
+                        <td id="n6"></td>
+                    <tr name="15">
+                    </tr>
+                    <td>15</td>
+                        <td id="o1"></td>
+                        <td id="o2"></td>
+                        <td id="o3"></td>
+                        <td id="o4"></td>
+                        <td id="o5"></td>
+                        <td id="o6"></td>
+                    <tr name="16">
+                    </tr>
+                    <td>16</td>
+                        <td id="p1"></td>
+                        <td id="p2"></td>
+                        <td id="p3"></td>
+                        <td id="p4"></td>
+                        <td id="p5"></td>
+                        <td id="p6"></td>
+                    <tr name="17">
+                    </tr>
+                    <td>17</td>
+                        <td id="q1"></td>
+                        <td id="q2"></td>
+                        <td id="q3"></td>
+                        <td id="q4"></td>
+                        <td id="q5"></td>
+                        <td id="q6"></td>
+                    <tr name="18">
+                    </tr>
+                    <td>18</td>
+                        <td id="r1"></td>
+                        <td id="r2"></td>
+                        <td id="r3"></td>
+                        <td id="r4"></td>
+                        <td id="r5"></td>
+                        <td id="r6"></td>
+                    <tr name="19">
+                    </tr>
+                    <td>19</td>
+                        <td id="s1"></td>
+                        <td id="s2"></td>
+                        <td id="s3"></td>
+                        <td id="s4"></td>
+                        <td id="s5"></td>
+                        <td id="s6"></td>
+                    <tr name="20">
+                    </tr>
+                    <td>20</td>
+                        <td id="t1"></td>
+                        <td id="t2"></td>
+                        <td id="t3"></td>
+                        <td id="t4"></td>
+                        <td id="t5"></td>
+                        <td id="t6"></td>
+                </tbody>
+            </table>
+            <!-- 結算金額 -->
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <th class="text-right" colspan="8">總計：NT$ <span>20000元</span></th>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- 訂單footer -->
+            <table class="table table-bordered">
+                <tbody>
+                    <tr>
+                        <td colspan="4">
+                            <p>備註：</p>
+                            <p>1) 本報價單未含5%營業稅。</p>
+                            <p>2) 本報價單經客戶確認回簽後視同具有合約效力。</p>
+                            <p>3) 付款方式：簽約訂金為貨款金額３０％，驗收日付清尾款７０％。</p>
+                        </td>
+                        <td>
+                            <p class="text-center">客戶簽章</p>
+                        </td>
+                        <td>
+                            <p class="text-center">業務簽章</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="container mt-600 d-flex justify-content-end py-3">
+        <button id="hide_Form" class="btn btn-primary btn-sm p-2" type="button" data-toggle="tooltip"
+            title="全數完畢點擊">登打完畢隱藏</button>
+    </div>
+    <!-- 客戶資料登打 -->
+    <main id="main">
+        <section class="py-5 bg-bg1">
+            <div class="container">
+                <p class="py-3">客戶資料：</p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">客戶名稱：</span>
+                            </div>
+                            <input id="customer_Name" type="text" class="form-control" data-toggle="tooltip"
+                                title="客戶名稱" placeholder="姓名/公司">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">客戶電話：</span>
+                            </div>
+                            <input id="customer_Phone" type="tel" class="form-control" data-toggle="tooltip"
+                                title="客戶電話" placeholder="電話">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">報價日期：</span>
+                            </div>
+                            <input id="customer_Date" type="date" class="form-control" data-toggle="tooltip"
+                                title="報價日期" placeholder="日期">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">施工地址：</span>
+                            </div>
+                            <input id="customer_Address" type="text" class="form-control" data-toggle="tooltip"
+                                title="施工地址" placeholder="地址">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- 客戶選擇資訊 -->
+        <section class="py-md-5 p-0 bg-bg2">
+            <div class="container border_set py-5 my-md-5 my-0">
+                <p class="h4">材質選擇：</p>
+                <br>
+                <div class="row">
+                    <div class="col-4">
+                        <select class="py-2 w-100" name="" id="barrel" data-toggle="tooltip" title="選擇桶身材質">
+                            <option value="" disabled selected>---選擇桶身材質---</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <select class="py-2 w-100" name="" id="mesa" data-toggle="tooltip" title="選擇檯面材質">
+                            <option value="" disabled selected>---選擇檯面材質---</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <select class="py-2 w-100" name="" id="plates" data-toggle="tooltip" title="選擇門板材質">
+                            <option value="" disabled selected>---選擇門板材質---</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container border_set py-5 my-5">
+                <p class="h4">客戶訂單明細：</p>
+                <!-- 客製化商品區 -->
+                <!-- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 ---- 1 -->
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area1">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list1" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer1">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num1" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit1" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price1" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count1" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note1" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+                <!-- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 ---- 2 -->
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area2">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list2" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer2">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num2" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit2" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price2" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count2" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note2" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area3">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list3" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer3">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num3" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit3" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price3" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count3" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note3" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4"  id="type_area4">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list4" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer4">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num4" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit4" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price4" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count4" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note4" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area5">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list5" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer5">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num5" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit5" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price5" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count5" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note5" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area6">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list6" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer6">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num6" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit6" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price6" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count6" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note6" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area7">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list7" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer7">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num7" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit7" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price7" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count7" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note7" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area8">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list8" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer8">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num8" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit8" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price8" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count8" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note8" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area9">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list9" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer9">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num9" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit9" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price9" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count9" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note9" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area10">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list10" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer10">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num10" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit10" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price10" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count10" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note10" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area11">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list11" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer11">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num11" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit11" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price11" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count11" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note11" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area12">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list12" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer12">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num12" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit12" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price12" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count12" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note12" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area13">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list13" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer13">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num13" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit13" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price13" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count13" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note13" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area14">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list14" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer14">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num14" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit14" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price14" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count14" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note14" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area15">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list15" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer15">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num15" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit15" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price15" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count15" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note15" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area16">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list16" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer16">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num16" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit16" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price16" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count16" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note16" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area17">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list17" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer17">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num17" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit17" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price17" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count17" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note17" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area18">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list18" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer18">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num18" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit18" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price18" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count18" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note18" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area19">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list19" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer19">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num19" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit19" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price19" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count19" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note19" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-md-2 col-4" id="type_area20">
+                        <p>類別</p>
+                        <select class="py-2 w-100 list20" name="" id="ALL_list" data-toggle="tooltip" title="選擇類別">
+                            <option disabled selected value="none"></option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-8" id="customer20">
+                        <p>自訂品名</p>
+                        <input type="text" class="form-control w-100">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>數量</p>
+                        <input id="num20" class="form-control w-100" min="0" max="99" type="number"
+                            data-toggle="tooltip" title="輸入數量">
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單位</p>
+                        <select class="py-2 w-100 unit20" name="" id="unit" data-toggle="tooltip" title="選擇單位">
+                            <option disabled selected></option>
+                        </select>
+                    </div>
+                    <div class="col-md-1 col-4">
+                        <p>單價</p>
+                        <input  class="form-control w-100 price20" type="text" data-toggle="tooltip"
+                            title="輸入/匯入單價">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>小計</p>
+                        <input id="count20" class="form-control w-100" data-toggle="tooltip" title="小計"
+                            type="text">
+                    </div>
+                    <div class="col-md-2 col-4">
+                        <p>附加說明</p>
+                        <input id="note20" class="form-control w-100" data-toggle="tooltip" title="備註" type="text">
+                    </div>
+                </div>
+
+
+                <hr>
+            </div>
+        </section>
+
+        <!-- 輸出btn -->
+        <section class="container py-5">
+            <div class="col-4">
+                <button id="enter" class="btn btn-primary btn-sm p-3 w-100" type="button">測試</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-5">
+
+    </footer>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="js/vendors.js"></script>
+    <script src="js/all.js"></script>
+</body>
+
+</html>
