@@ -3,7 +3,33 @@ $(document).ready(function () {
     window.onload = function(){
         ALL_List();
         unit_List()
+        //桶身
+        let barrelstr = '';
+        for (let i = 0; i < dataArr.barrelMaterial.length; i++) {
+            let string = `<option value="${dataArr.barrelMaterial[i].name}">${dataArr.barrelMaterial[i].name}</option>`
+            barrelstr += string;
+        }
+        $('#barrel').append(barrelstr);
+        //門板
+        let mesastr = '';
+        for (let i = 0; i < dataArr.mesaMaterial.length; i++) {
+            let string = `<option value="${dataArr.mesaMaterial[i].name}">${dataArr.mesaMaterial[i].name}</option>`
+            mesastr += string;
+        }
+        $('#mesa').append(mesastr);
+        //門板
+        let platesstr = '';
+        for (let i = 0; i < dataArr.platesMaterial.length; i++) {
+            let string = `<option value="${dataArr.platesMaterial[i].name}">${dataArr.platesMaterial[i].name}</option>`
+            platesstr += string;
+        }
+        $('#plates').append(platesstr);
     }
+
+    
+    
+
+
     $('.list1').change(function(){
         let value = $('.list1').val();
         if(value !== '自訂'){

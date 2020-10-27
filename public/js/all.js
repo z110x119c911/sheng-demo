@@ -206,7 +206,36 @@ $(document).ready(function () {
 
   window.onload = function () {
     ALL_List();
-    unit_List();
+    unit_List(); //桶身
+
+    var barrelstr = '';
+
+    for (var i = 0; i < dataArr.barrelMaterial.length; i++) {
+      var string = "<option value=\"".concat(dataArr.barrelMaterial[i].name, "\">").concat(dataArr.barrelMaterial[i].name, "</option>");
+      barrelstr += string;
+    }
+
+    $('#barrel').append(barrelstr); //門板
+
+    var mesastr = '';
+
+    for (var _i = 0; _i < dataArr.mesaMaterial.length; _i++) {
+      var _string = "<option value=\"".concat(dataArr.mesaMaterial[_i].name, "\">").concat(dataArr.mesaMaterial[_i].name, "</option>");
+
+      mesastr += _string;
+    }
+
+    $('#mesa').append(mesastr); //門板
+
+    var platesstr = '';
+
+    for (var _i2 = 0; _i2 < dataArr.platesMaterial.length; _i2++) {
+      var _string2 = "<option value=\"".concat(dataArr.platesMaterial[_i2].name, "\">").concat(dataArr.platesMaterial[_i2].name, "</option>");
+
+      platesstr += _string2;
+    }
+
+    $('#plates').append(platesstr);
   };
 
   $('.list1').change(function () {
@@ -834,7 +863,26 @@ $(document).ready(function () {
     $('#q6').empty().append(note_value17);
     $('#r6').empty().append(note_value18);
     $('#s6').empty().append(note_value19);
-    $('#t6').empty().append(note_value20);
+    $('#t6').empty().append(note_value20); //取得選擇與材質
+    //桶身
+
+    var barrel_val = $('#barrel').val(); //檯面
+
+    var mesa_val = $('#mesa').val(); //門板
+
+    var plates_val = $('#plates').val(); //Material_select
+    //桶身
+
+    $('#barrel_span_material').append(barrel_val); //門板
+
+    $('#mesa_span_material').append(mesa_val); //門板
+
+    $('#plates_span_material').append(plates_val); //客戶資訊customer_information
+
+    $('#customer_Name_ouput').append($('#customer_Name').val());
+    $('#customer_Phone_ouput').append($('#customer_Phone').val());
+    $('#customer_Date_ouput').append($('#customer_Date').val());
+    $('#work_Address_ouput').append($('#customer_Address').val());
   });
 });
 "use strict";
@@ -847,13 +895,6 @@ var data = {
     "name": "額外項目"
   }],
   // "title":"桶身選擇與材質",
-  "barrel": [{
-    "name": "上櫃"
-  }, {
-    "name": "下櫃"
-  }, {
-    "name": "上下櫃"
-  }],
   "barrelMaterial": [{
     "name": "木桶"
   }, {
@@ -864,13 +905,6 @@ var data = {
     "name": "發泡桶"
   }],
   // "title": "檯面選擇與材質",
-  "mesa": [{
-    "name": ""
-  }, {
-    "name": ""
-  }, {
-    "name": ""
-  }],
   "mesaMaterial": [{
     "name": "無檯面"
   }, {
@@ -887,13 +921,6 @@ var data = {
     "name": "矽鋼石"
   }],
   // "title": "門板選擇與材質",
-  "plates": [{
-    "name": ""
-  }, {
-    "name": ""
-  }, {
-    "name": ""
-  }],
   "platesMaterial": [{
     "name": "美耐門"
   }, {

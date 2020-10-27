@@ -425,7 +425,24 @@ $(document).ready(function () {
         $('#r6').empty().append(note_value18);
         $('#s6').empty().append(note_value19);
         $('#t6').empty().append(note_value20);
-
-
+        //取得選擇與材質
+        //桶身
+        const barrel_val = $('#barrel').val();
+        //檯面
+        const mesa_val = $('#mesa').val();
+        //門板
+        const plates_val = $('#plates').val();
+        //Material_select
+        //桶身
+        $('#barrel_span_material').append(barrel_val);
+        //門板
+        $('#mesa_span_material').append(mesa_val);
+        //門板
+        $('#plates_span_material').append(plates_val);
+        //客戶資訊customer_information
+        $('#customer_Name_ouput').append($('#customer_Name').val());
+        $('#customer_Phone_ouput').append($('#customer_Phone').val());
+        $('#customer_Date_ouput').append($('#customer_Date').val());
+        $('#work_Address_ouput').append($('#customer_Address').val());
     })
 });

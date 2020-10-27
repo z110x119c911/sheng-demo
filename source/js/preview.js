@@ -9,17 +9,6 @@ var data =
             },
         ],
         // "title":"桶身選擇與材質",
-        "barrel":[
-            {
-                "name": "上櫃"
-            },
-            {
-                "name": "下櫃"
-            },
-            {
-                "name": "上下櫃"
-            },
-        ],
         "barrelMaterial":[
             {
                 "name": "木桶"
@@ -35,17 +24,6 @@ var data =
             },
         ],
         // "title": "檯面選擇與材質",
-        "mesa": [
-            {
-                "name": ""
-            },
-            {
-                "name": ""
-            },
-            {
-                "name": ""
-            },
-        ],
         "mesaMaterial": [
             {
                 "name": "無檯面"
@@ -70,17 +48,6 @@ var data =
             },
         ],
         // "title": "門板選擇與材質",
-        "plates": [
-            {
-                "name": ""
-            },
-            {
-                "name": ""
-            },
-            {
-                "name": ""
-            },
-        ],
         "platesMaterial": [
             {
                 "name": "美耐門",
