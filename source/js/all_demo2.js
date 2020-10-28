@@ -24,6 +24,9 @@ $(document).ready(function () {
             platesstr += string;
         }
         $('#plates').append(platesstr);
+
+
+
     }
 
     
@@ -31,7 +34,7 @@ $(document).ready(function () {
 
 
     $('.list1').change(function(){
-        let value = $('.list1').val();
+        let value = $('.list1 :selected').text();
         if(value !== '自訂'){
             $('#type_area1').show();
             $('#customer1').hide();
@@ -41,7 +44,7 @@ $(document).ready(function () {
         }
     })
     $('.list2').change(function(){
-        let value = $('.list2').val();
+        let value = $('.list2 :selected').text();
         if(value !== '自訂'){
             $('#type_area2').show();
             $('#customer2').hide();
@@ -51,7 +54,7 @@ $(document).ready(function () {
         }
     })
     $('.list3').change(function(){
-        let value = $('.list3').val();
+        let value = $('.list3 :selected').text();
         if(value !== '自訂'){
             $('#type_area3').show();
             $('#customer3').hide();
@@ -61,7 +64,7 @@ $(document).ready(function () {
         }
     })
     $('.list4').change(function(){
-        let value = $('.list4').val();
+        let value = $('.list4 :selected').text();
         if(value !== '自訂'){
             $('#type_area4').show();
             $('#customer4').hide();
@@ -71,7 +74,7 @@ $(document).ready(function () {
         }
     })
     $('.list5').change(function(){
-        let value = $('.list5').val();
+        let value = $('.list5 :selected').text();
         if(value !== '自訂'){
             $('#type_area5').show();
             $('#customer5').hide();
@@ -81,7 +84,7 @@ $(document).ready(function () {
         }
     })
     $('.list6').change(function(){
-        let value = $('.list6').val();
+        let value = $('.list6 :selected').text();
         if(value !== '自訂'){
             $('#type_area6').show();
             $('#customer6').hide();
@@ -91,7 +94,7 @@ $(document).ready(function () {
         }
     })
     $('.list7').change(function(){
-        let value = $('.list7').val();
+        let value = $('.list7 :selected').text();
         if(value !== '自訂'){
             $('#type_area7').show();
             $('#customer7').hide();
@@ -101,7 +104,7 @@ $(document).ready(function () {
         }
     })
     $('.list8').change(function(){
-        let value = $('.list8').val();
+        let value = $('.list8 :selected').text();
         if(value !== '自訂'){
             $('#type_area8').show();
             $('#customer8').hide();
@@ -111,7 +114,7 @@ $(document).ready(function () {
         }
     })
     $('.list9').change(function(){
-        let value = $('.list9').val();
+        let value = $('.list9 :selected').text();
         if(value !== '自訂'){
             $('#type_area9').show();
             $('#customer9').hide();
@@ -121,7 +124,7 @@ $(document).ready(function () {
         }
     })
     $('.list10').change(function(){
-        let value = $('.list10').val();
+        let value = $('.list10 :selected').text();
         if(value !== '自訂'){
             $('#type_area10').show();
             $('#customer10').hide();
@@ -131,7 +134,7 @@ $(document).ready(function () {
         }
     })
     $('.list11').change(function(){
-        let value = $('.list11').val();
+        let value = $('.list11 :selected').text();
         if(value !== '自訂'){
             $('#type_area11').show();
             $('#customer11').hide();
@@ -141,7 +144,7 @@ $(document).ready(function () {
         }
     })
     $('.list12').change(function(){
-        let value = $('.list12').val();
+        let value = $('.list12 :selected').text();
         if(value !== '自訂'){
             $('#type_area12').show();
             $('#customer12').hide();
@@ -151,7 +154,7 @@ $(document).ready(function () {
         }
     })
     $('.list13').change(function(){
-        let value = $('.list13').val();
+        let value = $('.list13 :selected').text();
         if(value !== '自訂'){
             $('#type_area13').show();
             $('#customer13').hide();
@@ -161,7 +164,7 @@ $(document).ready(function () {
         }
     })
     $('.list14').change(function(){
-        let value = $('.list14').val();
+        let value = $('.list14 :selected').text();
         if(value !== '自訂'){
             $('#type_area14').show();
             $('#customer14').hide();
@@ -171,7 +174,7 @@ $(document).ready(function () {
         }
     })
     $('.list15').change(function(){
-        let value = $('.list15').val();
+        let value = $('.list15 :selected').text();
         if(value !== '自訂'){
             $('#type_area15').show();
             $('#customer15').hide();
@@ -181,7 +184,7 @@ $(document).ready(function () {
         }
     })
     $('.list16').change(function(){
-        let value = $('.list16').val();
+        let value = $('.list16 :selected').text();
         if(value !== '自訂'){
             $('#type_area16').show();
             $('#customer16').hide();
@@ -191,7 +194,7 @@ $(document).ready(function () {
         }
     })
     $('.list17').change(function(){
-        let value = $('.list17').val();
+        let value = $('.list17 :selected').text();
         if(value !== '自訂'){
             $('#type_area17').show();
             $('#customer17').hide();
@@ -201,7 +204,7 @@ $(document).ready(function () {
         }
     })
     $('.list18').change(function(){
-        let value = $('.list18').val();
+        let value = $('.list18 :selected').text();
         if(value !== '自訂'){
             $('#type_area18').show();
             $('#customer18').hide();
@@ -211,7 +214,7 @@ $(document).ready(function () {
         }
     })
     $('.list19').change(function(){
-        let value = $('.list19').val();
+        let value = $('.list19 :selected').text();
         if(value !== '自訂'){
             $('#type_area19').show();
             $('#customer19').hide();
@@ -221,7 +224,7 @@ $(document).ready(function () {
         }
     })
     $('.list20').change(function(){
-        let value = $('.list20').val();
+        let value = $('.list20 :selected').text();
         if(value !== '自訂'){
             $('#type_area20').show();
             $('#customer20').hide();

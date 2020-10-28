@@ -239,7 +239,7 @@ $(document).ready(function () {
   };
 
   $('.list1').change(function () {
-    var value = $('.list1').val();
+    var value = $('.list1 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area1').show();
@@ -250,7 +250,7 @@ $(document).ready(function () {
     }
   });
   $('.list2').change(function () {
-    var value = $('.list2').val();
+    var value = $('.list2 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area2').show();
@@ -261,7 +261,7 @@ $(document).ready(function () {
     }
   });
   $('.list3').change(function () {
-    var value = $('.list3').val();
+    var value = $('.list3 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area3').show();
@@ -272,7 +272,7 @@ $(document).ready(function () {
     }
   });
   $('.list4').change(function () {
-    var value = $('.list4').val();
+    var value = $('.list4 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area4').show();
@@ -283,7 +283,7 @@ $(document).ready(function () {
     }
   });
   $('.list5').change(function () {
-    var value = $('.list5').val();
+    var value = $('.list5 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area5').show();
@@ -294,7 +294,7 @@ $(document).ready(function () {
     }
   });
   $('.list6').change(function () {
-    var value = $('.list6').val();
+    var value = $('.list6 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area6').show();
@@ -305,7 +305,7 @@ $(document).ready(function () {
     }
   });
   $('.list7').change(function () {
-    var value = $('.list7').val();
+    var value = $('.list7 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area7').show();
@@ -316,7 +316,7 @@ $(document).ready(function () {
     }
   });
   $('.list8').change(function () {
-    var value = $('.list8').val();
+    var value = $('.list8 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area8').show();
@@ -327,7 +327,7 @@ $(document).ready(function () {
     }
   });
   $('.list9').change(function () {
-    var value = $('.list9').val();
+    var value = $('.list9 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area9').show();
@@ -338,7 +338,7 @@ $(document).ready(function () {
     }
   });
   $('.list10').change(function () {
-    var value = $('.list10').val();
+    var value = $('.list10 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area10').show();
@@ -349,7 +349,7 @@ $(document).ready(function () {
     }
   });
   $('.list11').change(function () {
-    var value = $('.list11').val();
+    var value = $('.list11 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area11').show();
@@ -360,7 +360,7 @@ $(document).ready(function () {
     }
   });
   $('.list12').change(function () {
-    var value = $('.list12').val();
+    var value = $('.list12 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area12').show();
@@ -371,7 +371,7 @@ $(document).ready(function () {
     }
   });
   $('.list13').change(function () {
-    var value = $('.list13').val();
+    var value = $('.list13 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area13').show();
@@ -382,7 +382,7 @@ $(document).ready(function () {
     }
   });
   $('.list14').change(function () {
-    var value = $('.list14').val();
+    var value = $('.list14 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area14').show();
@@ -393,7 +393,7 @@ $(document).ready(function () {
     }
   });
   $('.list15').change(function () {
-    var value = $('.list15').val();
+    var value = $('.list15 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area15').show();
@@ -404,7 +404,7 @@ $(document).ready(function () {
     }
   });
   $('.list16').change(function () {
-    var value = $('.list16').val();
+    var value = $('.list16 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area16').show();
@@ -415,7 +415,7 @@ $(document).ready(function () {
     }
   });
   $('.list17').change(function () {
-    var value = $('.list17').val();
+    var value = $('.list17 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area17').show();
@@ -426,7 +426,7 @@ $(document).ready(function () {
     }
   });
   $('.list18').change(function () {
-    var value = $('.list18').val();
+    var value = $('.list18 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area18').show();
@@ -437,7 +437,7 @@ $(document).ready(function () {
     }
   });
   $('.list19').change(function () {
-    var value = $('.list19').val();
+    var value = $('.list19 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area19').show();
@@ -448,7 +448,7 @@ $(document).ready(function () {
     }
   });
   $('.list20').change(function () {
-    var value = $('.list20').val();
+    var value = $('.list20 :selected').text();
 
     if (value !== '自訂') {
       $('#type_area20').show();
@@ -511,27 +511,27 @@ $(document).ready(function () {
     var value17 = $('.list17').val();
     var value18 = $('.list18').val();
     var value19 = $('.list19').val();
-    var value20 = $('.list20').val();
-    $('#a1').empty().append(value1);
-    $('#b1').empty().append(value2);
-    $('#c1').empty().append(value3);
-    $('#d1').empty().append(value4);
-    $('#e1').empty().append(value5);
-    $('#f1').empty().append(value6);
-    $('#g1').empty().append(value7);
-    $('#h1').empty().append(value8);
-    $('#i1').empty().append(value9);
-    $('#j1').empty().append(value10);
-    $('#k1').empty().append(value11);
-    $('#l1').empty().append(value12);
-    $('#m1').empty().append(value13);
-    $('#n1').empty().append(value14);
-    $('#o1').empty().append(value15);
-    $('#p1').empty().append(value16);
-    $('#q1').empty().append(value17);
-    $('#r1').empty().append(value18);
-    $('#s1').empty().append(value19);
-    $('#t1').empty().append(value20); // ---------------------------------
+    var value20 = $('.list20').val(); // $('#a1').empty().append(value1);
+    // $('#b1').empty().append(value2);
+    // $('#c1').empty().append(value3);
+    // $('#d1').empty().append(value4);
+    // $('#e1').empty().append(value5);
+    // $('#f1').empty().append(value6);
+    // $('#g1').empty().append(value7);
+    // $('#h1').empty().append(value8);
+    // $('#i1').empty().append(value9);
+    // $('#j1').empty().append(value10);
+    // $('#k1').empty().append(value11);
+    // $('#l1').empty().append(value12);
+    // $('#m1').empty().append(value13);
+    // $('#n1').empty().append(value14);
+    // $('#o1').empty().append(value15);
+    // $('#p1').empty().append(value16);
+    // $('#q1').empty().append(value17);
+    // $('#r1').empty().append(value18);
+    // $('#s1').empty().append(value19);
+    // $('#t1').empty().append(value20);
+    // ---------------------------------
     //自訂
 
     var self_value1 = $('#customer1 input').val();
@@ -554,27 +554,128 @@ $(document).ready(function () {
     var self_value18 = $('#customer18 input').val();
     var self_value19 = $('#customer19 input').val();
     var self_value20 = $('#customer20 input').val();
-    $('#a1').empty().append(self_value1);
-    $('#b1').empty().append(self_value2);
-    $('#c1').empty().append(self_value3);
-    $('#d1').empty().append(self_value4);
-    $('#e1').empty().append(self_value5);
-    $('#f1').empty().append(self_value6);
-    $('#g1').empty().append(self_value7);
-    $('#h1').empty().append(self_value8);
-    $('#i1').empty().append(self_value9);
-    $('#j1').empty().append(self_value10);
-    $('#k1').empty().append(self_value11);
-    $('#l1').empty().append(self_value12);
-    $('#m1').empty().append(self_value13);
-    $('#n1').empty().append(self_value14);
-    $('#o1').empty().append(self_value15);
-    $('#p1').empty().append(self_value16);
-    $('#q1').empty().append(self_value17);
-    $('#r1').empty().append(self_value18);
-    $('#s1').empty().append(self_value19);
-    $('#t1').empty().append(self_value20); // ---------------------------------
+
+    if (value1 || self_value1 != '') {
+      $('#a1').empty().append(value1 + self_value1);
+    } else {
+      $('#a1').empty();
+    }
+
+    if (value2 || self_value2 != '') {
+      $('#b1').empty().append(value2 + self_value2);
+    } else {
+      $('#b1').empty();
+    }
+
+    if (value3 || self_value3 != '') {
+      $('#c1').empty().append(value3 + self_value3);
+    } else {
+      $('#c1').empty();
+    }
+
+    if (value4 || self_value4 != '') {
+      $('#d1').empty().append(value4 + self_value4);
+    } else {
+      $('#d1').empty();
+    }
+
+    if (value5 || self_value5 != '') {
+      $('#e1').empty().append(value5 + self_value5);
+    } else {
+      $('#e1').empty();
+    }
+
+    if (value6 || self_value6 != '') {
+      $('#f1').empty().append(value6 + self_value6);
+    } else {
+      $('#f1').empty();
+    }
+
+    if (value7 || self_value7 != '') {
+      $('#g1').empty().append(value7 + self_value7);
+    } else {
+      $('#g1').empty();
+    }
+
+    if (value8 || self_value8 != '') {
+      $('#h1').empty().append(value8 + self_value8);
+    } else {
+      $('#h1').empty();
+    }
+
+    if (value9 || self_value9 != '') {
+      $('#i1').empty().append(value9 + self_value9);
+    } else {
+      $('#i1').empty();
+    }
+
+    if (value10 || self_value10 != '') {
+      $('#j1').empty().append(value10 + self_value10);
+    } else {
+      $('#j1').empty();
+    }
+
+    if (value11 || self_value11 != '') {
+      $('#k1').empty().append(value11 + self_value11);
+    } else {
+      $('#k1').empty();
+    }
+
+    if (value12 || self_value12 != '') {
+      $('#l1').empty().append(value12 + self_value12);
+    } else {
+      $('#l1').empty();
+    }
+
+    if (value13 || self_value13 != '') {
+      $('#m1').empty().append(value13 + self_value13);
+    } else {
+      $('#m1').empty();
+    }
+
+    if (value14 || self_value14 != '') {
+      $('#n1').empty().append(value14 + self_value14);
+    } else {
+      $('#n1').empty();
+    }
+
+    if (value15 || self_value15 != '') {
+      $('#o1').empty().append(value15 + self_value15);
+    } else {
+      $('#o1').empty();
+    }
+
+    if (value16 || self_value16 != '') {
+      $('#p1').empty().append(value16 + self_value16);
+    } else {
+      $('#p1').empty();
+    }
+
+    if (value17 || self_value17 != '') {
+      $('#q1').empty().append(value17 + self_value17);
+    } else {
+      $('#q1').empty();
+    }
+
+    if (value18 || self_value18 != '') {
+      $('#r1').empty().append(value18 + self_value18);
+    } else {
+      $('#r1').empty();
+    }
+
+    if (value19 || self_value19 != '') {
+      $('#s1').empty().append(value19 + self_value19);
+    } else {
+      $('#s1').empty();
+    }
+
+    if (value20 || self_value20 != '') {
+      $('#t1').empty().append(value20 + self_value20);
+    } else {
+      $('#t1').empty();
+    } // ---------------------------------
     //數量
+
 
     var num_value1 = $('#num1').val();
     var num_value2 = $('#num2').val();
@@ -843,7 +944,7 @@ $(document).ready(function () {
 
 
     var TotalDollar = price_value1 * num_value1 + price_value2 * num_value2 + price_value3 * num_value3 + price_value4 * num_value4 + price_value5 * num_value5 + price_value6 * num_value6 + price_value7 * num_value7 + price_value8 * num_value8 + price_value9 * num_value9 + price_value10 * num_value10 + price_value11 * num_value11 + price_value12 * num_value12 + price_value13 * num_value13 + price_value14 * num_value14 + price_value15 * num_value15 + price_value16 * num_value16 + price_value17 * num_value17 + price_value18 * num_value18 + price_value19 * num_value19 + price_value20 * num_value20;
-    $('#total').append(TotalDollar); // ---------------------------------
+    $('#total').empty().append(TotalDollar); // ---------------------------------
     //附加說明
 
     var note_value1 = $('#note1').val();
@@ -1030,8 +1131,6 @@ var data = {
     "test": "測試3"
   }],
   "all": [{
-    "name": "自訂"
-  }, {
     "name": "-----廚具-----"
   }, {
     "name": "上系統櫥櫃"
