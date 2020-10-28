@@ -269,6 +269,7 @@ $(document).ready(function () {
 
         // ---------------------------------
         //小計
+
         if(price_value1 != 0){
             $('#a5').empty().append(price_value1 * num_value1);
         }else{
@@ -370,9 +371,51 @@ $(document).ready(function () {
             $('#t5').empty().append('');
         }  
             
-            
-            
-            
+        // let count_value1 = $('#a5').val();
+        // let count_value2 = $('#b5').val();
+        // let count_value3 = $('#c5').val();
+        // let count_value4 = $('#d5').val();
+        // let count_value5 = $('#e5').val();
+
+        // let count_value6 = $('#f5').val();
+        // let count_value7 = $('#g5').val();
+        // let count_value8 = $('#h5').val();
+        // let count_value9 = $('#i5').val();
+        // let count_value10 = $('#j5').val();
+
+        // let count_value11 = $('#k5').val();
+        // let count_value12 = $('#l5').val();
+        // let count_value13 = $('#m5').val();
+        // let count_value14 = $('#n5').val();
+        // let count_value15 = $('#o5').val();
+
+        // let count_value16 = $('#p5').val();
+        // let count_value17 = $('#q5').val();
+        // let count_value18 = $('#r5').val();
+        // let count_value19 = $('#s5').val();
+        // let count_value20 = $('#t5').val();
+        
+        let TotalDollar = (price_value1 * num_value1 +
+                        price_value2 * num_value2 +
+                        price_value3 * num_value3 +
+                        price_value4 * num_value4 +
+                        price_value5 * num_value5 +
+                        price_value6 * num_value6 +
+                        price_value7 * num_value7 +
+                        price_value8 * num_value8 +
+                        price_value9 * num_value9 +
+                        price_value10 * num_value10 +
+                        price_value11 * num_value11 +
+                        price_value12 * num_value12 +
+                        price_value13 * num_value13 +
+                        price_value14 * num_value14 +
+                        price_value15 * num_value15 +
+                        price_value16 * num_value16 +
+                        price_value17 * num_value17 +
+                        price_value18 * num_value18 +
+                        price_value19 * num_value19 +
+                        price_value20 * num_value20)
+        $('#total').append(TotalDollar);
         
 
         // ---------------------------------
